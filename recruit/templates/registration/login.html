@@ -148,7 +148,7 @@
         </div>
 
         <div class="signin_bg text-center">
-            {% if now|date:"YmdHi" > start|date:"YmdHi" %}
+            {% if now|date:"YmdHi" < start|date:"YmdHi" %}
                 <h3 style="color:white;">아직 지원 기간이 아닙니다.</h3><br><br>
                 <span style="color:white; font-size:15px; line-height:1.9em;">
                     서류접수 : 3/16(월) ~ 3/22(일) 22:00:00<br>
@@ -199,7 +199,7 @@
 
 
 <script type="text/javascript">
-    var startDate = new Date("Mar 16, 2020 12:00:00").getTime();
+    var startDate = new Date("Mar 16, 2020 01:00:00").getTime();
     var endDate = new Date("Mar 27, 2020 23:59:59").getTime();
 
     var x = setInterval(function() {
