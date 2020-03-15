@@ -142,52 +142,13 @@
         </div>
 
         <div class="signin_bg text-center">
-            <!-- {% if now|date:"YmdHi" < start|date:"YmdHi" %} -->
-                <h3 style="color:white;"><a class="a-yellow" href="{% url 'guide' %}" >지원하기</a></h3><br><br>
-                <span style="color:white; font-size:15px; line-height:1.9em;">
-                    서류접수 : 3/16(월) ~ 3/27(일)<br>
-                    서류합격 발표 : 4/1(월) <br>
-                    개별면접 : 4/3(금), 4/4(토) 중 택 1<br>
-                    최종합격 발표 : 4/6(월) <br>
-                </span>
-            <!-- {% else %} -->
-                <!-- {% if user.is_authenticated %}로그인이 되어있는 상태 -->
-                    <!-- <h4 style="color:white;">{{ request.user.last_name }}님 환영합니다.</h4>
-                    {% if art %}
-                        <a class="btn btn-outline-warning btn-phone" style="color:white;" href="{% url 'show' %}">지원서 보기</a>
-                    {% else %}
-                        {% if now|date:"YmdHi" < end|date:"YmdHi" %} -->
-                        <!-- 지원서 링크 넣는곳 -->
-                            <!-- <a class="btn btn-outline-warning btn-phone" style="color:white;" href="{% url 'notice' %}">지원서 작성하기</a>
-                        {% else %}
-                            <br>
-                            <h5 style="color:white;">지원이 마감되었습니다.</h5>                        
-                        {% endif %}
-                    {% endif %} -->
-                    <!-- <br><br> -->
-                    <!--<a class="a-yellow" style="font-size: 20px;" href="{% url 'profile_update' request.user.profile.id %}">회원정보 수정하기 |</a>-->
-                        <!-- <a class="a-yellow" style="font-size: 20px;" href="{% url 'signout' %}">로그아웃</a> -->
-                    <!-- <br>
-                    <br> -->
-
-                <!-- {% else %}로그인이 안 되어있는 상태 -->
-                    <!-- <form method="post">
-                        {% csrf_token %}
-                        {% if error %}
-                            <p class="text-danger">{{ error }}</p>
-                        {% endif %}
-                        <label for="username" class="sr-only">Username</label>
-                        <input name="username" style="max-width: 300px;" type="text" id="username" class="form-control mx-auto" placeholder="아이디" required="" autofocus="">
-                        <br>
-                        <label for="password" class="sr-only">Password</label>
-                        <input name="password" style="max-width: 300px;" type="password" id="password" class="form-control mx-auto" placeholder="비밀번호" required=""><br>
-                        <input class="btn btn-outline-warning" type="submit" value="로그인">
-                        <br>
-                        <a class="a-yellow" href="{% url 'signup' %}">회원가입</a>
-                    </form>
-                    <br>
-                {% endif %}
-            {% endif %} -->
+            <h3 style="color:white;"><a class="a-yellow" href="{% url 'guide' %}" >지원하기</a></h3><br><br>
+            <span style="color:white; font-size:15px; line-height:1.9em;">
+                서류접수 : 3/16(월) ~ 3/27(일)<br>
+                서류합격 발표 : 4/1(월) <br>
+                개별면접 : 4/3(금), 4/4(토) 중 택 1<br>
+                최종합격 발표 : 4/6(월) <br>
+            </span>
         </div>
     </div>
 
@@ -228,7 +189,7 @@
 
         //id가 d-day인 HTML코드에 내용 삽입
         if(now<endDate){
-            document.getElementById("d-day").innerHTML = d +" - Day " + h + " : " + m + " : " + s;
+            document.getElementById("d-day").innerHTML = d +" Day - " + h + " : " + m + " : " + s;
         }
     });
 

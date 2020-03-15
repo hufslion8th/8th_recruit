@@ -38,13 +38,6 @@
                 <li class="nav-item mr-2">
                     <a class="nav-link mx-3" href="{% url 'faq' %}" style="font-size: 20px; font-weight: bold; line-height: 37px;">FAQ</a>
                 </li>
-                {% if now|date:"YmdHi" > start|date:"YmdHi" %}
-                    {% if user.is_authenticated %}
-                        <li class="nav-item border-left pl-2 phone_padding">
-                            <a class="nav-link mx-3 h-100" href="{% url 'profile_update' request.user.profile.id %}" style="font-size: 20px; font-weight: bold; line-height: 37px;">회원정보 수정하기</a>
-                        </li>
-                    {% endif %}
-                {% endif %}
             </ul>
         </div>
     </nav>
@@ -77,8 +70,9 @@
 {% block bootstrap4_after_content %}
     <div class="footer text-center mt-5">
         문의 <a class="a-yellow" href = "mailto: hufsglobal@likelion.org" >hufsglobal@likelion.org</a>
-        <a class="a-yellow" href="https://www.facebook.com/likelionhufs" style="font-size: 18px; font-weight: bold; ">Facebook</a>
-        Copyright 2020. Likelion Sogang, All Rights Reserved. Edited by Likelion HUFS Global
+        <a class="a-yellow" href="https://www.facebook.com/likelionhufs" style="font-size: 18px; font-weight: bold; ">Facebook</a><br>
+        Edited by Likelion HUFS Global<br>
+        Copyright 2020. Likelion Sogang, All Rights Reserved. 
     </div>
     <br>
 {% endblock %}
