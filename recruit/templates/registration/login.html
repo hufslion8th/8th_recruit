@@ -134,7 +134,7 @@
 
         <div class="header">
             <h1 class="text-center" style="font-family: 'Raleway', sans-serif; font-size: 90px; letter-spacing:3px" id="bold">HACK YOUR LIFE</h1>
-            <h2 class="text-center" sytle="font-size: 60px;" id="bold"><span class="first_line" style="color: #f09837;">멋쟁이 사자처럼</span> 서강대학교 <span style="color: #f09837;">8기</span> 리크루팅</h2>
+            <h2 class="text-center" sytle="font-size: 60px;" id="bold"><span class="first_line" style="color: #f09837;">멋쟁이 사자처럼</span> HUFS Global <span style="color: #f09837;">8기</span> 리크루팅</h2>
             <div class="dday text-center"> <!--지원시작/지원마감-->
                 <h5 style="color:white;">
                     {% if now|date:"YmdHi" < start|date:"YmdHi" %}
@@ -163,6 +163,7 @@
                         <a class="btn btn-outline-warning btn-phone" style="color:white;" href="{% url 'show' %}">지원서 보기</a>
                     {% else %}
                         {% if now|date:"YmdHi" < end|date:"YmdHi" %}
+                        <!-- 지원서 링크 넣는곳 -->
                             <a class="btn btn-outline-warning btn-phone" style="color:white;" href="{% url 'notice' %}">지원서 작성하기</a>
                         {% else %}
                             <br>
@@ -198,8 +199,8 @@
 
 
 <script type="text/javascript">
-    var startDate = new Date("Mar 16, 2020 10:00:00").getTime();
-    var endDate = new Date("Mar 22, 2020 22:00:00").getTime();
+    var startDate = new Date("Mar 16, 2020 12:00:00").getTime();
+    var endDate = new Date("Mar 27, 2020 23:59:59").getTime();
 
     var x = setInterval(function() {
         // 오늘 날짜 등록
