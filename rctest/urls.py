@@ -21,17 +21,17 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-                  path('signup/', views.SignupView.as_view(), name='signup'),
-                  path('admin/', admin.site.urls),
+                #   path('signup/', views.SignupView.as_view(), name='signup'),
+                #   path('admin/', admin.site.urls),
                   path('', views.CustomLoginView.as_view(), name="main"),
-                  path('signout/', views.signout, name="signout"),
-                  path('notice/', views.notice, name="notice"),
-                  path('new', views.NewView.as_view(), name="new"),
-                  path('show', views.ShowView.as_view(), name="show"),
-                  path('edit/<int:pk>', views.EditView.as_view(), name="edit"),
-                  path('profile_update/<int:pk>', views.UserUpdate.as_view(), name="profile_update"),
-                  path('submit', views.submit, name="submit"),
-                  path('delete', views.delete, name="delete"),
+                #   path('signout/', views.signout, name="signout"),
+                #   path('notice/', views.notice, name="notice"),
+                #   path('new', views.NewView.as_view(), name="new"),
+                #   path('show', views.ShowView.as_view(), name="show"),
+                #   path('edit/<int:pk>', views.EditView.as_view(), name="edit"),
+                #   path('profile_update/<int:pk>', views.UserUpdate.as_view(), name="profile_update"),
+                #   path('submit', views.submit, name="submit"),
+                #   path('delete', views.delete, name="delete"),
                   path('guide', views.guide, name="guide"),
                   path('faq', views.faq, name="faq"),
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
