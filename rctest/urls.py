@@ -33,5 +33,5 @@ urlpatterns = [
                 #   path('submit', views.submit, name="submit"),
                 #   path('delete', views.delete, name="delete"),
                   path('guide', views.guide, name="guide"),
-                #   path('faq', views.faq, name="faq"),
+                  path('faq', views.faq, name="faq"),
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
