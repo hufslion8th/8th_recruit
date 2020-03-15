@@ -137,47 +137,47 @@
             <h2 class="text-center" sytle="font-size: 60px;" id="bold"><span class="first_line" style="color: #f09837;">멋쟁이 사자처럼</span> HUFS Global <span style="color: #f09837;">8기</span> 리크루팅</h2>
             <div class="dday text-center"> <!--지원시작/지원마감-->
                 <h5 style="color:white;">
-                    {% if now|date:"YmdHi" < start|date:"YmdHi" %}
-                        지원 시작까지 남은 시간
-                    {% elif now|date:"YmdHi" < end|date:"YmdHi" %}
+                    <!-- {% if now|date:"YmdHi" < start|date:"YmdHi" %} -->
+                        <!-- 지원 시작까지 남은 시간 -->
+                    <!-- {% elif now|date:"YmdHi" < end|date:"YmdHi" %} -->
                         지원 마감까지 남은 시간
-                    {% endif %}
+                    <!-- {% endif %} -->
                 </h5>
                 <h3 class="text-center" id="d-day"></h3>
             </div>
         </div>
 
         <div class="signin_bg text-center">
-            {% if now|date:"YmdHi" < start|date:"YmdHi" %}
-                <h3 style="color:white;">아직 지원 기간이 아닙니다.</h3><br><br>
+            <!-- {% if now|date:"YmdHi" < start|date:"YmdHi" %} -->
+                <h3 style="color:white;"><a  href="{% url 'guide' %}" >지원하기</a></h3><br><br>
                 <span style="color:white; font-size:15px; line-height:1.9em;">
-                    서류접수 : 3/16(월) ~ 3/22(일) 22:00:00<br>
-                    서류합격 발표 : 3/23(월) 16:00<br>
-                    개별면접 : 3/25(수) ~ 3/27(금) 17시-20시<br>
-                    최종합격 발표 : 3/29(일) 18:00<br>
+                    서류접수 : 3/16(월) ~ 3/27(일) 22:00:00<br>
+                    서류합격 발표 : 4/1(월) 개별 메일 통보<br>
+                    개별면접 : 4/3(금), 4/4(토) 중 택 1<br>
+                    최종합격 발표 : 4/6(월) 개별 메일 통보<br>
                 </span>
-            {% else %}
-                {% if user.is_authenticated %}<!-- 로그인이 되어있는 상태 -->
-                    <h4 style="color:white;">{{ request.user.last_name }}님 환영합니다.</h4>
+            <!-- {% else %} -->
+                <!-- {% if user.is_authenticated %}로그인이 되어있는 상태 -->
+                    <!-- <h4 style="color:white;">{{ request.user.last_name }}님 환영합니다.</h4>
                     {% if art %}
                         <a class="btn btn-outline-warning btn-phone" style="color:white;" href="{% url 'show' %}">지원서 보기</a>
                     {% else %}
-                        {% if now|date:"YmdHi" < end|date:"YmdHi" %}
+                        {% if now|date:"YmdHi" < end|date:"YmdHi" %} -->
                         <!-- 지원서 링크 넣는곳 -->
-                            <a class="btn btn-outline-warning btn-phone" style="color:white;" href="{% url 'notice' %}">지원서 작성하기</a>
+                            <!-- <a class="btn btn-outline-warning btn-phone" style="color:white;" href="{% url 'notice' %}">지원서 작성하기</a>
                         {% else %}
                             <br>
                             <h5 style="color:white;">지원이 마감되었습니다.</h5>                        
                         {% endif %}
-                    {% endif %}
-                    <br><br>
+                    {% endif %} -->
+                    <!-- <br><br> -->
                     <!--<a class="a-yellow" style="font-size: 20px;" href="{% url 'profile_update' request.user.profile.id %}">회원정보 수정하기 |</a>-->
-                        <a class="a-yellow" style="font-size: 20px;" href="{% url 'signout' %}">로그아웃</a>
-                    <br>
-                    <br>
+                        <!-- <a class="a-yellow" style="font-size: 20px;" href="{% url 'signout' %}">로그아웃</a> -->
+                    <!-- <br>
+                    <br> -->
 
-                {% else %}<!-- 로그인이 안 되어있는 상태 -->
-                    <form method="post">
+                <!-- {% else %}로그인이 안 되어있는 상태 -->
+                    <!-- <form method="post">
                         {% csrf_token %}
                         {% if error %}
                             <p class="text-danger">{{ error }}</p>
@@ -193,7 +193,7 @@
                     </form>
                     <br>
                 {% endif %}
-            {% endif %}
+            {% endif %} -->
         </div>
     </div>
 
