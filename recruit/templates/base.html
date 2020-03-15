@@ -32,9 +32,9 @@
 
         <div class="navbar-collapse collapse w-100 order-2 dual-collapse2" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-                <!-- <li class="nav-item ">
-                    <a class="nav-link ml-3 mr-0" href="{% url 'guide' %}" style="font-size: 20px; font-weight: bold; line-height: 37px;">활동 안내</a>
-                </li> -->
+                <li class="nav-item ">
+                    <a class="nav-link ml-3 mr-0" href="{% url 'main' %}" style="font-size: 20px; font-weight: bold; line-height: 37px;">HOME</a>
+                </li>
                 <li class="nav-item mr-2">
                     <a class="nav-link mx-3" href="{% url 'faq' %}" style="font-size: 20px; font-weight: bold; line-height: 37px;">FAQ</a>
                 </li>
@@ -76,6 +76,9 @@
 {% endblock %}
 {% block bootstrap4_after_content %}
     <div class="footer text-center mt-5">
+        문의 <br>
+        E-mail: <a class="a-yellow" href = "mailto: hufsglobal@likelion.org" >hufsglobal@likelion.org</a><br>
+        <a class="a-yellow" href="https://www.facebook.com/likelionhufs" style="font-size: 18px; font-weight: bold; ">Facebook</a>
         Copyright 2020. Likelion Sogang, All Rights Reserved.<br>
      <span style="font-size:14px;">Edited by Likelion HUFS Global </span>
     </div>
