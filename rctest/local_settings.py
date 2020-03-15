@@ -7,5 +7,5 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 DEBUG = True
