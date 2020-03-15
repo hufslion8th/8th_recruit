@@ -38,3 +38,4 @@ virtualenv==20.0.10
 wcwidth==0.1.8
 whitenoise==3.3.1
 zipp==3.1.0
+psycopg2-2.8.4
