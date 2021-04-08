@@ -8,7 +8,7 @@ colorama==0.3.9
 confusable-homoglyphs==3.2.0
 distlib==0.3.0
 dj-database-url==0.5.0
-Django==2.2.4
+Django==2.2.20
 django-multiselectfield==0.1.12
 django-registration==3.1
 django-sslserver==0.22
